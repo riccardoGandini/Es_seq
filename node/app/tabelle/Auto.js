@@ -13,11 +13,13 @@ Auto.init({
     nome: {
         type: DataTypes.STRING(20)
     },
-    modello: {
-        type: DataTypes.STRING(20)
+    fkmodello: {
+        type: DataTypes.SMALLINT,
     },
     fkpropietario: {
         type: DataTypes.INTEGER,
         allowNull: false
     }
 })
+
+module.exports = Auto

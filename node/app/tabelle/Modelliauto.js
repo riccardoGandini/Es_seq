@@ -1,21 +1,18 @@
 const { Model,DataTypes } = require("sequelize")
 const sequelize = require("../config")
 
-class Propietari extends Model {}
+class ModelliAuto extends Model {}
 
-Propietari.init({
+ModelliAuto.init({
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.SMALLINT,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
     },
-    nome: {
-        type: DataTypes.STRING(20)
-    },
-    cognome: {
+    modello: {
         type: DataTypes.STRING(20)
     }
 })
 
-module.exports = Propietari
+module.exports = ModelliAuto
